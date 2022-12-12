@@ -42,6 +42,3 @@ const createPhotoArray = () => {
 const photos = Array.from({length: MAX_COUNT_PHOTOS}).map((element, index) => createPhotoData(index + 1));
 };
 createPhotoArray();    
-    
-
-
