@@ -16,7 +16,7 @@ const getRandomPositiveInteger = (a, b) => {
     return Math.floor(result);
 };
 const checkStringLength = (string, length) => string.length <= length;
-checkStringLength('werwer', 4);
+checkStringLength('bnmbnm', 4);
 const CreateComment = (id) => ({
 id,
 avatar: `img/avatar-${getRandomPositiveIntege(AvatarNumber.MIN, AvatarNumber.MAX)}.svg`,
