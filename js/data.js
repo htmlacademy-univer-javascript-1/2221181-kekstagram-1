@@ -4,7 +4,7 @@ const MESSAGES = ['Всё отлично!', 'В целом всё неплохо
 const DESCRIPTIONS = ['Ещё один день. Ещё одно фото.', 'В Питере пить.', '-А завтра что? — А завтра лето!'];
 
 const MAX_COUNT_PHOTO = 25;
-const COUNT_COMMENT = 8;
+
 
 const CountLike = {
   MIN: 15,
