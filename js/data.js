@@ -33,8 +33,8 @@ const createPhotoData = (id) => ({
     likes: getRandomPositiveInteger(CountLike.MIN, CountLike.MAX),
     comments: CreateCommentsData(),
 });
-const createPhoto = () => {
+const createPhotos = () => {
 const photos = Array.from({length: MAX_COUNT_PHOTOS}).map((element, index) => createPhotoData(index + 1));
 };
-createPhoto(); 
+createPhotos(); 
 export {createPhotos};
