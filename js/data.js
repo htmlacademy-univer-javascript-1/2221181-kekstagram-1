@@ -7,34 +7,34 @@ const MAX_COUNT_PHOTO = 25;
 const COUNT_COMMENT = 8;
 
 const CountLike = {
-	MIN: 15,
-	MAX: 200
+  MIN: 15,
+  MAX: 200
 };
 const AvatarNumber = {
-    MIN:1,
-    MAX:6
+  MIN:1,
+  MAX:6
 };
 const createComment = (id) => ({
-id,
-avatar: `img/avatar-${getRandomPositiveIntege(AvatarNumber.MIN, AvatarNumber.MAX)}.svg`,
-message: MASSAGES[getRandomPositiveIntege(0, MESSAGES.length - 1)],
-name: NAMES[getRandomPositiveIntege(0, NAMES.length - 1)],
+  id,
+  avatar: `img/avatar-${getRandomPositiveIntege(AvatarNumber.MIN, AvatarNumber.MAX)}.svg`,
+  message: MASSAGES[getRandomPositiveIntege(0, MESSAGES.length - 1)],
+  name: NAMES[getRandomPositiveIntege(0, NAMES.length - 1)],
 });
 const createCommentsData = () => {
-    const comments = Array.from({
-        length: 3
-    });
-    return comments.map((element, index) => createComments(index + 1));
+  const comments = Array.from({
+    length: 3
+});
+  return comments.map((element, index) => createComments(index + 1));
 };
 const createPhotoData = (id) => ({
-    id,
-    url: `photos/${id}.jpg`,
-    description: DESCRIPTIONS[getRandomPositiveInteger(0, DESCRIPTIONS.length - 1)],
-    likes: getRandomPositiveInteger(CountLike.MIN, CountLike.MAX),
-    comments: CreateCommentsData(),
+  id,
+  url: `photos/${id}.jpg`,
+  description: DESCRIPTIONS[getRandomPositiveInteger(0, DESCRIPTIONS.length - 1)],
+  likes: getRandomPositiveInteger(CountLike.MIN, CountLike.MAX),
+  comments: CreateCommentsData(),
 });
 const createPhotos = () => {
-const photos = Array.from({length: MAX_COUNT_PHOTOS}).map((element, index) => createPhotoData(index + 1));
+  const photos = Array.from({length: MAX_COUNT_PHOTOS}).map((element, index) => createPhotoData(index + 1));
 };
 createPhotos(); 
 export {createPhotos};
