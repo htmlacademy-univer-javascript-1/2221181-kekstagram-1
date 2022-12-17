@@ -7,4 +7,4 @@ const getRandomPositiveInteger = (a, b) => {
 const checkStringLength = (string, length) => string.length <= length;
 checkStringLength('bnmbnm', 4);
 
-export {getRandomPositiveInteger};
+export {getRandomPositiveInteger};  
