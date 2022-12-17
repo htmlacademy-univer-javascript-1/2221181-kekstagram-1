@@ -23,7 +23,7 @@ const createComment = (id) => ({
 const createCommentsData = () => {
   const comments = Array.from({
     length: 3
-});
+  });
   return comments.map((element, index) => createComments(index + 1));
 };
 const createPhotoData = (id) => ({
