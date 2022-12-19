@@ -2,7 +2,7 @@ import { createPhotos } from './data.js';
 
 const pictureTemplate = document.querySelector('#picture').content;
 
-const picturesData = creatуePhotos();
+const picturesData = createPhotos();
 
 const picturesContainer = document.querySelector('.pictures');
 
