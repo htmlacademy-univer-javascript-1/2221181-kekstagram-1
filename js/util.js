@@ -1,10 +1,30 @@
-const getRandomPositiveInteger = (a, b) => {
-  const lower = Math.ceil(Math.min(Math.abs(a), Math.abs(b)));
-  const upper = Math.floor(Math.max(Math.abs(a), Math.abs(b)));
-  const result = Math.random() * (upper - lower +1) + lower;
-  return Math.floor(result);
-};
-const checkStringLength = (string, length) => string.length <= length;
-checkStringLength('bnmbnm', 4);
+function getRandomInteger(min, max){
+  if (min < max || min === max && Number.isInteger(min)) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+  return 'Wrong range!';
+}
 
-export {getRandomPositiveInteger};
+function checkMaxLength(string, maxLength){
+  return string.length <= maxLength;
+}
+
+function getNonRepeatingRandoms(min, max, count, prohibited) {
+  const nums = [];
+  while (nums.length !== count) {
+    const newNum = getRandomInteger(min, max);
+    if (!nums.includes(newNum) && !prohibited.includes(newNum)) {
+      nums.push(newNum);
+    }
+    else {
+      continue;
+    }
+  }
+  return nums;
+}
+
+checkMaxLength('abc', 3);
+
+export {getRandomInteger, getNonRepeatingRandoms};
